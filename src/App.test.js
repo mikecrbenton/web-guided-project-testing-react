@@ -11,7 +11,14 @@ test('renders without errors', ()=>{
 });
 
 test('fetches and renders mission data', async () => {
+    mockFetchMissions.mockResolvedValueOnce({
+        data:[
+            {mission_name:"Mission 1", mission_id:1},
+            {mission_name:"Mission 2", mission_id:2}
+        ]
+    });
     render(<App/>);
+
 
     const button = screen.getByRole("button");
     userEvent.click(button);
