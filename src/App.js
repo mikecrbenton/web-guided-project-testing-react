@@ -13,9 +13,10 @@ export default function App() {
   const getData = async () => {
     setIsFetchingData(true);
     const res = await fetchMissions();
-    console.log(res);
+    const res2 = await fetchMissions();
+    console.log(res2);
     setIsFetchingData(false);
-    setMissions(res.data);
+    setMissions(res2.data);
 
     // fetchMissions()
     //   .then(res => {
