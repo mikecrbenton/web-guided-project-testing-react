@@ -1,5 +1,5 @@
 import React from 'react';
-import {render, screen} from "@testing-library/react";
+import {render, screen, wait} from "@testing-library/react";
 import App from './App';
 import userEvent from '@testing-library/user-event';
 
@@ -13,5 +13,8 @@ test('fetches and renders mission data', async () => {
     const button = screen.getByRole("button");
     userEvent.click(button);
 
+    await wait();
+
     
+
 });
