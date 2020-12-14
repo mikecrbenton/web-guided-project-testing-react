@@ -7,5 +7,6 @@ test("renders without errors", ()=>{
 });
 
 test("renders new missions when missions data is passed", ()=>{
-
+    const component = render(<MissionsList missions={[]}/>);
+    console.log(component);
 });
