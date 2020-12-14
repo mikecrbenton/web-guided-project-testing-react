@@ -26,7 +26,10 @@ test('renders button when isFetchingData is false', ()=>{
 });
 
 test('calls getData when button is clicked', ()=>{
-    const getDataMock = jest.fn();
+    const getDataMock = jest.fn(()=>{
+        return(Math.random());
+    });
+
     render(<MissionForm getData={getDataMock}/>);
     const button = screen.queryByRole("button");
     userEvent.click(button);
