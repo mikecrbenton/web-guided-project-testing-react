@@ -15,7 +15,6 @@ export default function App() {
     setIsFetchingData(true);
 
     const res = await fetchMissions();
-    console.log(res);
     setIsFetchingData(false);
     setMissions(res.data);
 
