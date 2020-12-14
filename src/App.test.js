@@ -15,6 +15,6 @@ test('fetches and renders mission data', async () => {
 
     await wait();
 
-    
-
+    const missions = getAllByTestId("mission");
+    console.log(missions);
 });
