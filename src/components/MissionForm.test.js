@@ -30,6 +30,9 @@ test('calls getData when button is clicked', ()=>{
     render(<MissionForm getData={getDataMock}/>);
     const button = screen.queryByRole("button");
     userEvent.click(button);
+    userEvent.click(button);
+    userEvent.click(button);
+    userEvent.click(button);
 
     console.log(getDataMock.mock);
 });
