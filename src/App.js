@@ -12,20 +12,25 @@ export default function App() {
 
   const getData = async () => {
     setIsFetchingData(true);
-    fetchMissions()
-      .then(res => {
+    const res = await fetchMission();
+    console.log(res);
+    setIsFetchingData(false);
+    setMissions(res.data);
 
-        fetchMissions()
-          .then( res => {
-            console.log(res);
-            setIsFetchingData(false);
-            setMissions(res.data);
-          })
-      })
-      .catch(err => {
-        setIsFetchingData(false);
-        setError(err.message);
-      });
+    // fetchMissions()
+    //   .then(res => {
+
+    //     fetchMissions()
+    //       .then( res => {
+    //         console.log(res);
+    //         setIsFetchingData(false);
+    //         setMissions(res.data);
+    //       })
+    //   })
+    //   .catch(err => {
+    //     setIsFetchingData(false);
+    //     setError(err.message);
+    //   });
   };
 
   return (
