@@ -17,5 +17,5 @@ test("renders new missions when missions data is passed", ()=>{
         {mission_name: "Mission 2", mission_id:2}
     ];
 
-    rerender(<MissionList missions={})
+    rerender(<MissionsList missions={missions}/>);
 }); 
