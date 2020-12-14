@@ -15,7 +15,8 @@ test('renders message when isFetchingData is true', ()=>{
     const displayText = screen.queryByText(/we are fetching data/i);
 
     //Assert: Expect the div to exist
-    expect(displayText).toBeEqual(/we are fetching data/i)
+    expect(displayText).toHaveValue("we are fetching data");
+
 });
 
 test('renders button when isFetchingData is false', ()=>{
