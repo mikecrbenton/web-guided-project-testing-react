@@ -11,13 +11,15 @@ export default function App() {
   const [missions, setMissions] = useState([]);
 
   const getData = async () => {
+    //async await version
     setIsFetchingData(true);
-    const res = await fetchMissions();
-    const res2 = await fetchMissions();
-    console.log(res2);
-    setIsFetchingData(false);
-    setMissions(res2.data);
 
+    const res = await fetchMissions();
+    console.log(res);
+    setIsFetchingData(false);
+    setMissions(res.data);
+
+    // promise chain version
     // fetchMissions()
     //   .then(res => {
 
