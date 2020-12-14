@@ -20,7 +20,9 @@ test('renders message when isFetchingData is true', ()=>{
 });
 
 test('renders button when isFetchingData is false', ()=>{
-    
+    render(<MissionForm isFetchingData={false}/>);
+    const button = screen.queryByRole('button');
+    expect(button).not.toBeNull();
 });
 
 test('calls getData when button is clicked', ()=>{
