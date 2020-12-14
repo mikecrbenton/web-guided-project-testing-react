@@ -18,4 +18,6 @@ test("renders new missions when missions data is passed", ()=>{
     ];
 
     rerender(<MissionsList missions={missions}/>);
+    missionObjects = screen.queryAllByTestId("mission");
+    expect(missionObjects).toHaveLength(2);
 }); 
