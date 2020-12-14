@@ -36,4 +36,6 @@ test('calls getData when button is clicked', ()=>{
     expect(getDataMock.mock.calls.length === 1);
     expect(getDataMock.mock.calls.length).toEqual(1);
     expect(getDataMock.mock.calls).toHaveLength(1);
+    expect(getDataMock).toHaveBeenCalled();
+    expect(getDataMock).toHaveBeenCalledTimes(1);
 });
