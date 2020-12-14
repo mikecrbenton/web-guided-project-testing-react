@@ -11,5 +11,11 @@ test("renders new missions when missions data is passed", ()=>{
     
     let missionObjects = screen.queryAllByTestId("mission");
     expect(missionObjects).toHaveLength(0);
-    
+
+    const missions = [
+        {mission_name: "Mission 1", mission_id:1},
+        {mission_name: "Mission 2", mission_id:2}
+    ];
+
+    rerender(<MissionList missions={})
 }); 
