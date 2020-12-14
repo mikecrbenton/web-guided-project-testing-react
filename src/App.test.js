@@ -13,9 +13,8 @@ test('fetches and renders mission data', async () => {
     const button = screen.getByRole("button");
     userEvent.click(button);
 
-    await wait(()=>{
-        const missions = screen.    expect(screen.getAllByTestId("mission")).toHaveLength(2);
-        ("mission");
+    await wait(() => {
+        const missions = screen.getAllByTestId("mission");
         console.log(missions);
     });
 });
