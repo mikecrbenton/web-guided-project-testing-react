@@ -18,8 +18,7 @@ test('fetches and renders mission data', async () => {
         ]
     });
     render(<App/>);
-
-
+    
     const button = screen.getByRole("button");
     userEvent.click(button);
 
