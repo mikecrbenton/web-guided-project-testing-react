@@ -33,5 +33,7 @@ test('calls getData when button is clicked', ()=>{
     const button = screen.queryByRole("button");
     userEvent.click(button);
 
-    expect(getDataMock.mock.calls.length).toBe;
+    expect(getDataMock.mock.calls.length === 1);
+    expect(getDataMock.mock.calls.length).toEqual(1);
+    expect(getDataMock.mock.calls).toHaveLength(1);
 });
