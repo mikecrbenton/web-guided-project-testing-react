@@ -7,6 +7,9 @@ test("renders without errors", ()=>{
 });
 
 test("renders new missions when missions data is passed", ()=>{
-    const component = render(<MissionsList missions={[]}/>);
-    console.log(component);
-});
+    const { rerender} = render(<MissionsList missions={[]}/>);
+    
+    let missionObjects = screen.queryAllByTestId("mission");
+    expect(missionObjects).toHaveLength(0);
+    
+}); 
