@@ -6,6 +6,6 @@ test('renders without errors', ()=>{
     render(<App/>);
 });
 
-test('fetches and renders mission data', async ()=>{
+test('fetches and renders mission data', async () => {
 
 });
