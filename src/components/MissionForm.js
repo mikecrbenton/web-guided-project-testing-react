@@ -1,6 +1,7 @@
 import React from "react";
 
 const MissionForm = props => {
+
   const handleGetData = e => {
     e.preventDefault();
     props.getData();
@@ -8,7 +9,8 @@ const MissionForm = props => {
 
   return (
     <>
-      {props.isFetchingData ? (
+      {props.isFetchingData 
+        ? (
         <div>we are fetching data</div>
       ) : (
         <button onClick={handleGetData}>Get Data</button>

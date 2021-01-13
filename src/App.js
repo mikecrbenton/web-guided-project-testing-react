@@ -6,12 +6,16 @@ import MissionForm from "./components/MissionForm";
 import MissionsList from "./components/MissionsList";
 
 export default function App() {
+
+  // state management  
   const [isFetchingData, setIsFetchingData] = useState(false);
   const [error, setError] = useState("");
   const [missions, setMissions] = useState([]);
 
   const getData = () => {
+
     setIsFetchingData(true);
+    // in separate file
     fetchMissions()
       .then(res => {
         console.log(res);
@@ -23,6 +27,7 @@ export default function App() {
         setError(err.message);
       });
   };
+
   return (
     <div className="App">
       <h1>Space Missions</h1>
